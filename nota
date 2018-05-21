@@ -1,0 +1,21 @@
+T1 = T * transf_homogenea(r.elo(0))
+print '1: \n', T1 , "\n" 
+T2 = T1 * transf_homogenea(r.elo(1))
+print '2: \n',T2 , "\n" 
+T3 = T2 * transf_homogenea(r.elo(2))
+print '3: \n',T3 , "\n" 
+T4 = T3 * transf_homogenea(r.elo(3))
+print '4: \n',T4 , "\n" 
+T5 = T4 * transf_homogenea(r.elo(4))
+print '5: \n',T5 , "\n" 
+
+i = 0
+
+while i < 5: 
+	T = T * r.elo(i)
+	print 'Calculando...'
+	#print T
+	i = i+1
+
+T = T * transf_homogenea(r.tool)
+print T
