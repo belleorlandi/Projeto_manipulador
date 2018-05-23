@@ -1,5 +1,6 @@
 # funtions_robot.py
 import math 
+import sympy
 import numpy as np
 
 def deg2rad(deg):
@@ -49,7 +50,6 @@ class Robot:
 		a = self.a[n]
 		alpha = self.alpha[n]
 		return theta, d, a, alpha
-
 
 
 __version__ = '0.1'

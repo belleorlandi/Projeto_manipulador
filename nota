@@ -19,3 +19,12 @@ while i < 5:
 
 T = T * transf_homogenea(r.tool)
 print T
+
+
+T = transf_homogenea(r.base)
+print 'Base: \n', T, "\n" 
+
+print r.elo(0) , "\n" 
+
+T1 = transf_homogenea(r.elo(0))
+print '1: \n', T1, "\n" 
