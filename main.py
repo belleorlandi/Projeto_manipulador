@@ -27,8 +27,9 @@ print '-------------------------------------------'
 print '           Cinematica Direta'
 print '-------------------------------------------', "\n" 
 
- 
-r.theta = np.array([0, 0, 0, 0, 0]) #Angulos das juntas desejado para a posicao destino
+np.set_printoptions(precision=3)
+
+r.theta = np.array([0, 0, 0, 0, 0], dtype=float) #Angulos das juntas desejado para a posicao destino
 
 print '>>>>> TRANSFORMACAO HOMOGENEA DE CADA ELO', "\n" 
 
@@ -64,5 +65,5 @@ print  T5, "\n"
 
 print '>>>>> TRANSFORMACAO HOMOGENEA DE 1 A 5', "\n" 
 
-Tf = T1 * T2
+Tf = T1.dot(T2)
 print Tf

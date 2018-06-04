@@ -19,7 +19,7 @@ def transf_homogenea((theta, d, a, alpha)):
 	A = np.array([[math.cos(theta),  -math.cos(alpha)*math.sin(theta),   math.sin(alpha)*math.sin(theta),   a*math.cos(theta)],
        	 		 [math.sin(theta) ,   math.cos(alpha)*math.cos(theta),  -math.sin(alpha)*math.cos(theta),   a*math.sin(theta)],
     			 [ 0         ,         math.sin(alpha)     ,       math.cos(alpha)       ,        d      ],
-    			 [ 0         ,             0          ,          0             ,        1      ]])
+    			 [ 0         ,             0          ,          0             ,        1      ]], dtype=float)
 	return A
 	#Fim da funcao DH
 
@@ -31,12 +31,12 @@ class Robot:
 		self.name = name
 		self.DOF = 5
 		# Tabela DH
-		self.theta = np.array([0, 0, 0, 0, 0])
-		self.d = np.array([0, 0, 0, 0, 0.050])
-		self.a = np.array([-0.0265, 0.1029, 0.0957, 0.0300, 0])
-		self.alpha = np.array([math.pi/2, 0, 0, -math.pi/2, 0])
-		self.tool = np.array([0,    0.1, 0, 0])
-		self.base = np.array([0, 0.0593, 0, 0])
+		self.theta = np.array([0, 0, 0, 0, 0], dtype=float)
+		self.d = np.array([0, 0, 0, 0, 0.050], dtype=float)
+		self.a = np.array([-0.0265, 0.1029, 0.0957, 0.0300, 0], dtype=float)
+		self.alpha = np.array([math.pi/2, 0, 0, -math.pi/2, 0], dtype=float)
+		self.tool = np.array([0,    0.1, 0, 0], dtype=float)
+		self.base = np.array([0, 0.0593, 0, 0], dtype=float)
 
 	def hello(self):
 		print 'Ola, meu nome e', self.name , '\n'
